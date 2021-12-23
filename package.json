@@ -1,6 +1,6 @@
 {
   "name": "@definetool/rename-files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "批量的文件重命名工具，支持自定义规则。",
   "main": "index.js",
   "scripts": {},

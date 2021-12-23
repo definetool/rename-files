@@ -28,9 +28,9 @@ let task = new Task({
  
     source: '/Volumes/3/摄像头监控',
 
-    rename0: function ({ dir, ext, filename, name, file, }) {
+    rename: function ({ dir, ext, filename, name, file, index, }) {
         if (filename == 'Thumbs.db') {
-            return `/Users/micty/Pictures/test/db/${filename}`;
+            return `/Volumes/3/test/${file.split('/').join('_')}`;
         }
 
         name = name.split(`\\`).join('_');

@@ -127,8 +127,8 @@ class Task {
 
         timer.start(`开始重命名文件，共 ${colors.cyan(files.length)} 个 >>`.bold);
 
-        files.forEach((file) => {
-            let dest = meta.rename(file);
+        files.forEach((file, index) => {
+            let dest = meta.rename(file, index);
 
             if (dest == file) {
                 stat.jumps.push(file);

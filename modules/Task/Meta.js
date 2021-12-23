@@ -38,7 +38,7 @@ module.exports = {
             'source': source ? { 'dir': source, } : null,
             'confict': null,
 
-            'rename': function (file) { 
+            'rename': function (file, index) { 
                 if (!rename) {
                     return file;
                 }
@@ -54,6 +54,7 @@ module.exports = {
                     name,       //基本文件名，不包括后缀。      
                     filename,   //文件名，包括后缀名。
                     file,       //原始完整文件名。
+                    index,      //当前文件在文件列表中的索引值。
                 });
 
                 return dest || file;
