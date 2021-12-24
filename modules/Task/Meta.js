@@ -9,6 +9,10 @@ module.exports = {
         let { home, source, rename, } = config;
         let { console, } = more;
 
+        if (home) {
+            home = Path.normalizeDir(home);
+        }
+
         if (source) {
             source = Path.resolve(source);
             source = Path.normalizeDir(source);
@@ -55,6 +59,9 @@ module.exports = {
                     filename,   //文件名，包括后缀名。
                     file,       //原始完整文件名。
                     index,      //当前文件在文件列表中的索引值。
+
+                    'home': meta.home,
+                    'source': meta.source,
                 });
 
                 return dest || file;

@@ -1,6 +1,6 @@
 
 
-const { parse, rename, } = require('./index');
+const { parse, rename, } = require('../index');
 
 // parse('/Volumes/3/摄像头监控');
 // return;

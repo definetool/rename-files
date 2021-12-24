@@ -1,7 +1,6 @@
 
-
-const { Task, ProgressBar, } = require('./index');
 const $Date = require('@definejs/date');
+const { Task, ProgressBar, } = require('../index');
 
 
 //设置进度条的样式。
@@ -28,9 +27,9 @@ let task = new Task({
  
     source: '/Volumes/3/摄像头监控',
 
-    rename: function ({ dir, ext, filename, name, file, index, }) {
+    rename: function ({ dir, ext, filename, name, file, index, home, source, }) {
         if (filename == 'Thumbs.db') {
-            return `/Volumes/3/test/${file.split('/').join('_')}`;
+            return `${home}removed/${index}-${filename}`;
         }
 
         name = name.split(`\\`).join('_');

@@ -38,6 +38,7 @@ rename({
 
 #### 自定义方式
 ``` js
+
 const { Task, ProgressBar, } = require('./index');
 const $Date = require('@definejs/date');
 
@@ -66,10 +67,9 @@ let task = new Task({
  
     source: '/Volumes/3/摄像头监控',
 
-    rename0: function ({ dir, ext, filename, name, file, }) {
-        
+    rename: function ({ dir, ext, filename, name, file, index, home, source, }) {
         if (filename == 'Thumbs.db') {
-            return `/Users/micty/Pictures/test/db/${filename}`;
+            return `${home}removed/${index}-${filename}`;
         }
 
         name = name.split(`\\`).join('_');
